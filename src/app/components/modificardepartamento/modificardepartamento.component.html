@@ -1,0 +1,18 @@
+<div class="align-items-xl-center">
+    <h1>Insetar Departamentos</h1>
+    <form class="form form-control" #formeditar="ngForm">
+        <label>Introduzca numero</label>
+        <input value="{{departamento.numero}}" name="cajanum" #cajanum type="text"/><br/>
+        <label>Introduzca nombre</label>
+        <input value="{{departamento.nombre}}" name="cajanom" #cajanom type="text"/><br/>
+        <label>Introduzca localidad</label>
+        <input value="{{departamento.localidad}}" name="cajaloca" #cajaloca type="text"/><br/>
+    
+        <button (click)="editarDepartamento()" >
+            Modificar Departamento
+        </button>
+        <hr/>
+        
+    
+    </form>
+    </div>

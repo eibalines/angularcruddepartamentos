@@ -1,0 +1,11 @@
+<div style="width: 50%;margin: 0 auto">
+<div *ngIf="empleados">
+    <h1 style="color: brown;">Pulsa para ver detalles</h1><hr/>
+    <ul *ngFor="let emp of empleados">
+        <li><a class="btn btn-info" [routerLink]="['/detallesempleado' , emp.idEmpleado]">{{emp.apellido}}</a></li>
+    </ul><hr/>
+
+</div>
+
+<a class="btn btn-success" [routerLink]="['/home']"> Volver a Departamentos</a>
+</div>

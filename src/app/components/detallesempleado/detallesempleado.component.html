@@ -1,0 +1,46 @@
+<h1>Detalles empleado</h1>
+<div *ngIf="detallesempleado">
+    
+    <table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Id Empleado</th>
+            <th>Apellido</th>
+            <th>Salario</th>
+            <th>Oficio</th>
+            <th>Director</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{detallesempleado.idEmpleado}}</td>
+            <td>{{detallesempleado.apellido}}</td>
+            <td>{{detallesempleado.salario}}</td>
+            <td>{{detallesempleado.oficio}}</td>
+            <td>{{detallesempleado.director}}</td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            
+            <td>
+                <form #formsumar="ngForm">
+                    
+                    <input #cajasumar name="cajasumar" type="number"/>
+                    <button (click)="incrementarSalario()" class="btn btn-info">
+                        Incrementar Salario
+                    </button>
+
+                </form>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+    </table>
+
+</div>
+
+

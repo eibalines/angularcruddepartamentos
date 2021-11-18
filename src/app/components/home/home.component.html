@@ -1,0 +1,42 @@
+<div style="width: 50%; margin: 0 auto;">
+<h1 class="h1 high--dark">Departamentos</h1>
+
+<table class="table table-bordered" *ngIf="departamentos" >
+    <thead>
+        <tr>
+            <th>Numero</th>
+            <th>Nombre</th>
+            <th>Localidad</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let depto of departamentos">
+            <td>{{depto.numero}}</td>
+            <td>{{depto.nombre}}</td>
+            <td>{{depto.localidad}}</td>
+            <td>
+                <a class="btn btn-success" [routerLink]="['/tablaempleados', depto.numero]">
+                    Mostrar empleados
+                </a></td>
+            <td>
+                <a class="btn btn-info" [routerLink]="['/modificardepartamentos' , depto.numero , depto.nombre, depto.localidad]">
+                    Editar
+                </a>
+            </td>
+             <td>
+                <button class="btn btn-danger" (click)="eliminarDeptos(depto.numero)">
+                    Eliminar
+                </button>
+            </td> 
+            
+            
+        </tr>
+    </tbody>
+</table>
+<div> 
+   
+</div>
+</div>
